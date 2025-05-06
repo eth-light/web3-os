@@ -21,7 +21,7 @@ const SearchOverlay: React.FC = () => {
         <input
           className="w-[600px] px-6 py-3 rounded-xl bg-white bg-opacity-90 text-black shadow-lg outline-none text-lg"
           type="text"
-          placeholder="Search the web..."
+          placeholder="Search the new, free web..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

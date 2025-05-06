@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dock icon base style */
+.dock-icon {
+  @apply w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center text-2xl hover:bg-opacity-30 transition-all duration-150;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.window {
+    @apply absolute top-24 left-24 w-[320px] h-[240px] bg-white rounded-lg shadow-lg flex flex-col z-10;
+  }
+  .window-header {
+    @apply h-10 bg-blue-600 text-white px-4 flex items-center justify-between font-bold rounded-t-lg;
+  }
+  .window-content {
+    @apply p-4 flex-1 text-sm;
+  }
+  .close-btn {
+    @apply cursor-pointer;
+  }
+  .hidden {
+    display: none;
+  }
+
+  .window {
+    @apply absolute w-[320px] h-[240px] bg-white rounded-lg shadow-lg flex flex-col z-10;
+    resize: both;
+    overflow: auto;
+  }
+  
+  .window-header {
+    @apply h-10 text-white px-4 flex items-center justify-between font-bold rounded-t-lg cursor-move;
+    background-color: rgba(100, 100, 100, 0.6); /* Semi-transparent grey */
+    backdrop-filter: blur(6px);
+  }
+  
+  .window-content {
+    @apply p-4 flex-1 text-sm;
+  }
+  
+  .close-btn {
+    @apply cursor-pointer;
+  }
+  
+
+  .window {
+    @apply absolute top-20 left-20 w-[400px] h-[300px] rounded-lg shadow-xl bg-white bg-opacity-90 backdrop-blur-md border border-gray-300 z-20;
+  }
+  
+  .window-header {
+    @apply h-10 px-4 flex items-center justify-between font-semibold cursor-move text-white bg-gray-600 bg-opacity-50 rounded-t-lg;
+  }
+  
+  .window-content {
+    @apply p-4 h-full overflow-auto bg-white bg-opacity-80 rounded-b-lg;
+  }
+  
+  .close-btn {
+    @apply cursor-pointer font-bold text-red-500 hover:text-red-700;
+  }
+  

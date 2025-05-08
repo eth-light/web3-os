@@ -2,7 +2,7 @@
   "name": "web3-os",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://eth.light.github.io/web3-os",
+  "homepage": "https://eth-light.github.io/web3-os",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
